@@ -1,0 +1,5 @@
+
+#*.caffemodel
+*.caffemodel.h5
+*.solverstate
+*.solverstate.h5
