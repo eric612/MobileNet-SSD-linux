@@ -29,9 +29,6 @@ If load success , you can see the image window like this
 
 ![alt tag](2017-12-13_141522.png)
 
-### Optional detector
-
-Set detect.cmd varible "detector" (0,1) to switch VGG or MobileNet
 
 ### Trainning Prepare
 
@@ -66,13 +63,6 @@ follow this [project](https://github.com/chuanqi305/MobileNet-SSD) step
 #### MobilnetSSD_V2
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/0jzYd-UfaYY/0.jpg)](https://www.youtube.com/watch?v=0jzYd-UfaYY)
-
-### Webcam Demo
-
-```
-> cd $caffe_root/
-> demo_webcam.cmd
-```
 
 #### Vehicle deploy model 
 
