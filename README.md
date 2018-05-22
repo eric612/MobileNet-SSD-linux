@@ -46,7 +46,7 @@ follow this [project](https://github.com/chuanqi305/MobileNet-SSD) step
 
 ```
 > cd $caffe_root/
-> demo.cmd or demov2.cmd (MobilenetSSD_V2)
+> sh demo_video.sh
 ```
 
 #### MobilnetSSD
