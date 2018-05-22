@@ -1,0 +1,715 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d3109/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d3109.dir/build.make CMakeFiles/cmTC_d3109.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d3109.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d3109.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d3109
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3109.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d3109.dir/CheckSymbolExists.c.o  -o cmTC_d3109 
+CMakeFiles/cmTC_d3109.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d3109.dir/build.make:97: recipe for target 'cmTC_d3109' failed
+make[1]: *** [cmTC_d3109] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d3109/fast' failed
+make: *** [cmTC_d3109/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e87bb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e87bb.dir/build.make CMakeFiles/cmTC_e87bb.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e87bb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e87bb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e87bb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e87bb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e87bb.dir/CheckFunctionExists.c.o  -o cmTC_e87bb -lpthreads 
+/usr/bin/x86_64-linux-gnu-ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e87bb.dir/build.make:97: recipe for target 'cmTC_e87bb' failed
+make[1]: *** [cmTC_e87bb] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e87bb/fast' failed
+make: *** [cmTC_e87bb/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a4ce5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a4ce5.dir/build.make CMakeFiles/cmTC_a4ce5.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4ce5.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a4ce5.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a4ce5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4ce5.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a4ce5.dir/CheckSymbolExists.c.o  -o cmTC_a4ce5 
+CMakeFiles/cmTC_a4ce5.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a4ce5.dir/build.make:97: recipe for target 'cmTC_a4ce5' failed
+make[1]: *** [cmTC_a4ce5] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a4ce5/fast' failed
+make: *** [cmTC_a4ce5/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_af910/fast"
+/usr/bin/make -f CMakeFiles/cmTC_af910.dir/build.make CMakeFiles/cmTC_af910.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_af910.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_af910.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_af910
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af910.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_af910.dir/CheckFunctionExists.c.o  -o cmTC_af910 -lpthreads 
+/usr/bin/x86_64-linux-gnu-ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_af910.dir/build.make:97: recipe for target 'cmTC_af910' failed
+make[1]: *** [cmTC_af910] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_af910/fast' failed
+make: *** [cmTC_af910/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9ff93/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9ff93.dir/build.make CMakeFiles/cmTC_9ff93.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9ff93.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9ff93.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9ff93
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ff93.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9ff93.dir/CheckSymbolExists.c.o  -o cmTC_9ff93 
+CMakeFiles/cmTC_9ff93.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9ff93.dir/build.make:97: recipe for target 'cmTC_9ff93' failed
+make[1]: *** [cmTC_9ff93] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9ff93/fast' failed
+make: *** [cmTC_9ff93/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fc4cf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fc4cf.dir/build.make CMakeFiles/cmTC_fc4cf.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc4cf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fc4cf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fc4cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc4cf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_fc4cf.dir/CheckFunctionExists.c.o  -o cmTC_fc4cf -lpthreads 
+/usr/bin/x86_64-linux-gnu-ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fc4cf.dir/build.make:97: recipe for target 'cmTC_fc4cf' failed
+make[1]: *** [cmTC_fc4cf] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fc4cf/fast' failed
+make: *** [cmTC_fc4cf/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6ff77/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6ff77.dir/build.make CMakeFiles/cmTC_6ff77.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6ff77.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_6ff77.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6ff77
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ff77.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_6ff77.dir/CheckSymbolExists.c.o  -o cmTC_6ff77 
+CMakeFiles/cmTC_6ff77.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6ff77.dir/build.make:97: recipe for target 'cmTC_6ff77' failed
+make[1]: *** [cmTC_6ff77] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6ff77/fast' failed
+make: *** [cmTC_6ff77/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1681d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1681d.dir/build.make CMakeFiles/cmTC_1681d.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1681d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1681d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1681d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1681d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_1681d.dir/CheckFunctionExists.c.o  -o cmTC_1681d -lpthreads 
+/usr/bin/x86_64-linux-gnu-ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1681d.dir/build.make:97: recipe for target 'cmTC_1681d' failed
+make[1]: *** [cmTC_1681d] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1681d/fast' failed
+make: *** [cmTC_1681d/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_03dff/fast"
+/usr/bin/make -f CMakeFiles/cmTC_03dff.dir/build.make CMakeFiles/cmTC_03dff.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_03dff.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5    -o CMakeFiles/cmTC_03dff.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_03dff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03dff.dir/link.txt --verbose=1
+/usr/bin/gcc-5      -rdynamic CMakeFiles/cmTC_03dff.dir/CheckSymbolExists.c.o  -o cmTC_03dff 
+CMakeFiles/cmTC_03dff.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_03dff.dir/build.make:97: recipe for target 'cmTC_03dff' failed
+make[1]: *** [cmTC_03dff] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_03dff/fast' failed
+make: *** [cmTC_03dff/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2d463/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2d463.dir/build.make CMakeFiles/cmTC_2d463.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2d463.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2d463.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2d463
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d463.dir/link.txt --verbose=1
+/usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2d463.dir/CheckFunctionExists.c.o  -o cmTC_2d463 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2d463.dir/build.make:97: recipe for target 'cmTC_2d463' failed
+make[1]: *** [cmTC_2d463] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2d463/fast' failed
+make: *** [cmTC_2d463/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc948/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc948.dir/build.make CMakeFiles/cmTC_bc948.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc948.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5    -o CMakeFiles/cmTC_bc948.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_bc948
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc948.dir/link.txt --verbose=1
+/usr/bin/gcc-5      -rdynamic CMakeFiles/cmTC_bc948.dir/CheckSymbolExists.c.o  -o cmTC_bc948 
+CMakeFiles/cmTC_bc948.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bc948.dir/build.make:97: recipe for target 'cmTC_bc948' failed
+make[1]: *** [cmTC_bc948] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bc948/fast' failed
+make: *** [cmTC_bc948/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e3ccc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e3ccc.dir/build.make CMakeFiles/cmTC_e3ccc.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e3ccc.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e3ccc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e3ccc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3ccc.dir/link.txt --verbose=1
+/usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e3ccc.dir/CheckFunctionExists.c.o  -o cmTC_e3ccc -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e3ccc.dir/build.make:97: recipe for target 'cmTC_e3ccc' failed
+make[1]: *** [cmTC_e3ccc] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e3ccc/fast' failed
+make: *** [cmTC_e3ccc/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_99261/fast"
+/usr/bin/make -f CMakeFiles/cmTC_99261.dir/build.make CMakeFiles/cmTC_99261.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_99261.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5    -o CMakeFiles/cmTC_99261.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_99261
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99261.dir/link.txt --verbose=1
+/usr/bin/gcc-5      -rdynamic CMakeFiles/cmTC_99261.dir/CheckSymbolExists.c.o  -o cmTC_99261 
+CMakeFiles/cmTC_99261.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_99261.dir/build.make:97: recipe for target 'cmTC_99261' failed
+make[1]: *** [cmTC_99261] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_99261/fast' failed
+make: *** [cmTC_99261/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_91f23/fast"
+/usr/bin/make -f CMakeFiles/cmTC_91f23.dir/build.make CMakeFiles/cmTC_91f23.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91f23.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_91f23.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_91f23
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91f23.dir/link.txt --verbose=1
+/usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_91f23.dir/CheckFunctionExists.c.o  -o cmTC_91f23 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_91f23.dir/build.make:97: recipe for target 'cmTC_91f23' failed
+make[1]: *** [cmTC_91f23] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_91f23/fast' failed
+make: *** [cmTC_91f23/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b3fbf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b3fbf.dir/build.make CMakeFiles/cmTC_b3fbf.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b3fbf.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5    -o CMakeFiles/cmTC_b3fbf.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b3fbf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3fbf.dir/link.txt --verbose=1
+/usr/bin/gcc-5      -rdynamic CMakeFiles/cmTC_b3fbf.dir/CheckSymbolExists.c.o  -o cmTC_b3fbf 
+CMakeFiles/cmTC_b3fbf.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b3fbf.dir/build.make:97: recipe for target 'cmTC_b3fbf' failed
+make[1]: *** [cmTC_b3fbf] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b3fbf/fast' failed
+make: *** [cmTC_b3fbf/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4fff7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4fff7.dir/build.make CMakeFiles/cmTC_4fff7.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4fff7.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4fff7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4fff7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4fff7.dir/link.txt --verbose=1
+/usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_4fff7.dir/CheckFunctionExists.c.o  -o cmTC_4fff7 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4fff7.dir/build.make:97: recipe for target 'cmTC_4fff7' failed
+make[1]: *** [cmTC_4fff7] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4fff7/fast' failed
+make: *** [cmTC_4fff7/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b29a3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b29a3.dir/build.make CMakeFiles/cmTC_b29a3.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b29a3.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5    -o CMakeFiles/cmTC_b29a3.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b29a3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b29a3.dir/link.txt --verbose=1
+/usr/bin/gcc-5      -rdynamic CMakeFiles/cmTC_b29a3.dir/CheckSymbolExists.c.o  -o cmTC_b29a3 
+CMakeFiles/cmTC_b29a3.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b29a3.dir/build.make:97: recipe for target 'cmTC_b29a3' failed
+make[1]: *** [cmTC_b29a3] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b29a3/fast' failed
+make: *** [cmTC_b29a3/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c0bcd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c0bcd.dir/build.make CMakeFiles/cmTC_c0bcd.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c0bcd.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c0bcd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c0bcd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0bcd.dir/link.txt --verbose=1
+/usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c0bcd.dir/CheckFunctionExists.c.o  -o cmTC_c0bcd -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c0bcd.dir/build.make:97: recipe for target 'cmTC_c0bcd' failed
+make[1]: *** [cmTC_c0bcd] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c0bcd/fast' failed
+make: *** [cmTC_c0bcd/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f7173/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f7173.dir/build.make CMakeFiles/cmTC_f7173.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f7173.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5    -o CMakeFiles/cmTC_f7173.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f7173
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7173.dir/link.txt --verbose=1
+/usr/bin/gcc-5      -rdynamic CMakeFiles/cmTC_f7173.dir/CheckSymbolExists.c.o  -o cmTC_f7173 
+CMakeFiles/cmTC_f7173.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f7173.dir/build.make:97: recipe for target 'cmTC_f7173' failed
+make[1]: *** [cmTC_f7173] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f7173/fast' failed
+make: *** [cmTC_f7173/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b29e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b29e2.dir/build.make CMakeFiles/cmTC_b29e2.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b29e2.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b29e2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b29e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b29e2.dir/link.txt --verbose=1
+/usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b29e2.dir/CheckFunctionExists.c.o  -o cmTC_b29e2 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b29e2.dir/build.make:97: recipe for target 'cmTC_b29e2' failed
+make[1]: *** [cmTC_b29e2] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b29e2/fast' failed
+make: *** [cmTC_b29e2/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_34494/fast"
+/usr/bin/make -f CMakeFiles/cmTC_34494.dir/build.make CMakeFiles/cmTC_34494.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34494.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5    -o CMakeFiles/cmTC_34494.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_34494
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34494.dir/link.txt --verbose=1
+/usr/bin/gcc-5      -rdynamic CMakeFiles/cmTC_34494.dir/CheckSymbolExists.c.o  -o cmTC_34494 
+CMakeFiles/cmTC_34494.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_34494.dir/build.make:97: recipe for target 'cmTC_34494' failed
+make[1]: *** [cmTC_34494] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_34494/fast' failed
+make: *** [cmTC_34494/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0e445/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0e445.dir/build.make CMakeFiles/cmTC_0e445.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e445.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0e445.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0e445
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e445.dir/link.txt --verbose=1
+/usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_0e445.dir/CheckFunctionExists.c.o  -o cmTC_0e445 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0e445.dir/build.make:97: recipe for target 'cmTC_0e445' failed
+make[1]: *** [cmTC_0e445] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0e445/fast' failed
+make: *** [cmTC_0e445/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a5978/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a5978.dir/build.make CMakeFiles/cmTC_a5978.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a5978.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5    -o CMakeFiles/cmTC_a5978.dir/CheckSymbolExists.c.o   -c /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a5978
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5978.dir/link.txt --verbose=1
+/usr/bin/gcc-5      -rdynamic CMakeFiles/cmTC_a5978.dir/CheckSymbolExists.c.o  -o cmTC_a5978 
+CMakeFiles/cmTC_a5978.dir/CheckSymbolExists.c.o: 於函式 main:
+CheckSymbolExists.c:(.text+0x1b): 未定義參考到 pthread_create
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a5978.dir/build.make:97: recipe for target 'cmTC_a5978' failed
+make[1]: *** [cmTC_a5978] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a5978/fast' failed
+make: *** [cmTC_a5978/fast] Error 2
+
+File /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1e65a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1e65a.dir/build.make CMakeFiles/cmTC_1e65a.dir/build
+make[1]: Entering directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1e65a.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1e65a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1e65a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e65a.dir/link.txt --verbose=1
+/usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_1e65a.dir/CheckFunctionExists.c.o  -o cmTC_1e65a -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1e65a.dir/build.make:97: recipe for target 'cmTC_1e65a' failed
+make[1]: *** [cmTC_1e65a] Error 1
+make[1]: Leaving directory '/home/avisonic/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1e65a/fast' failed
+make: *** [cmTC_1e65a/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/avisonic01/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_27744/fast"
+/usr/bin/make -f CMakeFiles/cmTC_27744.dir/build.make CMakeFiles/cmTC_27744.dir/build
+make[1]: Entering directory '/home/avisonic01/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_27744.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-5     -o CMakeFiles/cmTC_27744.dir/CheckSymbolExists.c.o   -c /home/avisonic01/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_27744
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27744.dir/link.txt --verbose=1
+/usr/bin/gcc-5       CMakeFiles/cmTC_27744.dir/CheckSymbolExists.c.o  -o cmTC_27744 -rdynamic 
+CMakeFiles/cmTC_27744.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_27744.dir/build.make:97: recipe for target 'cmTC_27744' failed
+make[1]: *** [cmTC_27744] Error 1
+make[1]: Leaving directory '/home/avisonic01/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_27744/fast' failed
+make: *** [cmTC_27744/fast] Error 2
+
+File /home/avisonic01/mobilenet_ssd/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/avisonic01/mobilenet_ssd/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5d193/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5d193.dir/build.make CMakeFiles/cmTC_5d193.dir/build
+make[1]: Entering directory '/home/avisonic01/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d193.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-5    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5d193.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5d193
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d193.dir/link.txt --verbose=1
+/usr/bin/gcc-5   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5d193.dir/CheckFunctionExists.c.o  -o cmTC_5d193 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5d193.dir/build.make:97: recipe for target 'cmTC_5d193' failed
+make[1]: *** [cmTC_5d193] Error 1
+make[1]: Leaving directory '/home/avisonic01/mobilenet_ssd/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5d193/fast' failed
+make: *** [cmTC_5d193/fast] Error 2
+
+
