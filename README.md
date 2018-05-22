@@ -5,14 +5,6 @@
 
 ### Running Caffe 
 
-Download SSD_300x300 [deploy model](https://drive.google.com/file/d/0BzKzrI_SkD1_WVVTSmQxU0dVRzA/view) and save at 
-
-$caffe_root\models\VGGNet\VOC0712\SSD_300x300\
-
-Download deploy weights from original [web](https://github.com/chuanqi305/MobileNet-SSD) and save at 
-
-$caffe_root\models\\MobileNet\
-
 ```
 > cd $caffe_root/
 > sh demo.sh
