@@ -492,7 +492,7 @@ int main(int argc, char** argv) {
   else 
   {
 	  char buf[1000];
-	  sprintf(buf, "%s/*.mp4", indir);
+	  sprintf(buf, "%s/*.mp4", "data//");
 	  cv::String path(buf); //select only jpg
 
 	  vector<cv::String> fn;
