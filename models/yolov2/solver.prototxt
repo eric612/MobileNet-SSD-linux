@@ -4,8 +4,8 @@ train_net: "models/yolov2/train.prototxt"
 #test_interval: 10000
 base_lr: 0.0005
 display: 10
-max_iter: 30000
-lr_policy: "multistep"
+max_iter: 50000
+lr_policy: "multifixed"
 gamma: 0.5
 weight_decay: 0.000004
 snapshot: 1000
@@ -15,9 +15,19 @@ debug_info: false
 snapshot_after_train: true
 test_initialization: false
 average_loss: 10
-stepvalue: 8000
-stepvalue: 16000
-stepvalue: 24000
+#stepvalue: 20000
+#stepvalue: 40000
+#stepvalue: 45000
+
+stagelr: 0.0005
+stagelr: 0.001
+stagelr: 0.0005
+stagelr: 0.0001
+stageiter: 100
+stageiter: 16000
+stageiter: 24000
+stageiter: 32000
+
 iter_size: 2
 type: "RMSProp"
 eval_type: "detection"

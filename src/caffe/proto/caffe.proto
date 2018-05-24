@@ -309,6 +309,8 @@ message SolverParameter {
   // the stepsize for learning rate policy "multistep"
   repeated int32 stepvalue = 34;
   // the stepsize for learning rate policy "plateau"
+  repeated float stagelr = 50;
+  repeated int32 stageiter = 51;
   repeated int32 plateau_winsize = 43;
 
   // Set clip_gradients to >= 0 to clip parameter gradients to that L2 norm,
@@ -865,6 +867,7 @@ message ContrastiveLossParameter {
   // legacy_version = true uses (margin - d^2). This is kept to support /
   // reproduce existing models and results
   optional bool legacy_version = 2 [default = false];
+
 }
 
 message ConvolutionParameter {

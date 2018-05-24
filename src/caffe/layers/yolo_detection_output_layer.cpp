@@ -84,7 +84,7 @@ void ApplyNms(vector< PredictionResult<Dtype> >& boxes, vector<int>& idxes, Dtyp
 			if (idx_map.find(j) != idx_map.end()) {
 				continue;
 			}
-			/*vector<Dtype> Bbox1, Bbox2;
+			vector<Dtype> Bbox1, Bbox2;
 			Bbox1.push_back(boxes[i].x);
 			Bbox1.push_back(boxes[i].y);
 			Bbox1.push_back(boxes[i].w);
@@ -98,8 +98,8 @@ void ApplyNms(vector< PredictionResult<Dtype> >& boxes, vector<int>& idxes, Dtyp
 			Dtype iou = box_iou(Bbox1, Bbox2);
 			if (iou >= threshold) {
 			idx_map[j] = 1;
-			}*/
-				NormalizedBBox Bbox1, Bbox2;
+			}
+			/*	NormalizedBBox Bbox1, Bbox2;
 			setNormalizedBBox(Bbox1, boxes[i].x, boxes[i].y, boxes[i].w, boxes[i].h);
 			setNormalizedBBox(Bbox2, boxes[j].x, boxes[j].y, boxes[j].w, boxes[j].h);
 
@@ -107,7 +107,7 @@ void ApplyNms(vector< PredictionResult<Dtype> >& boxes, vector<int>& idxes, Dtyp
 
 			if (overlap >= threshold) {
 				idx_map[j] = 1;
-			}
+			}*/
 		}
 	}
 	for (int i = 0; i < boxes.size(); ++i) {
@@ -149,8 +149,8 @@ void class_index_and_score(Dtype* input, int classes, PredictionResult<Dtype>& p
 }
 template <typename Dtype>
 void get_region_box(Dtype* x, PredictionResult<Dtype>& predict, vector<Dtype> biases, int n, int index, int i, int j, int w, int h) {
-	predict.x = (i + (x[index + 0])) / w;
-	predict.y = (j + (x[index + 1])) / h;
+	predict.x = (i + sigmoid(x[index + 0])) / w;
+	predict.y = (j + sigmoid(x[index + 1])) / h;
 	predict.w = exp(x[index + 2]) * biases[2 * n] / w;
 	predict.h = exp(x[index + 3]) * biases[2 * n + 1] / h;
 }

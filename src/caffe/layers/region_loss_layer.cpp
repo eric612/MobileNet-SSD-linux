@@ -88,10 +88,10 @@ template <typename Dtype>
 void get_region_box(vector<Dtype> &b, Dtype* x, vector<Dtype> biases, int n, int index, int i, int j, int w, int h) {
 
 	b.clear();
-	b.push_back((i + (x[index + 0])) / w);
-	b.push_back((j + (x[index + 1])) / h);
-	b.push_back(exp(x[index + 2]) * biases[2 * n] / w);
-	b.push_back(exp(x[index + 3]) * biases[2 * n + 1] / h);
+	b.push_back((i + sigmoid(x[index + 0])) / w);
+	b.push_back((j + sigmoid(x[index + 1])) / h);
+	b.push_back(exp(x[index + 2]) * biases[2 * n] / (w));
+	b.push_back(exp(x[index + 3]) * biases[2 * n + 1] / (h));
 }
 template <typename Dtype>
 Dtype delta_region_box(vector<Dtype> truth, Dtype* x, vector<Dtype> biases, int n, int index, int i, int j, int w, int h, Dtype* delta, float scale) {
@@ -106,10 +106,10 @@ Dtype delta_region_box(vector<Dtype> truth, Dtype* x, vector<Dtype> biases, int 
 	float tw = log(truth[2] * w / biases[2 * n]); //truth[2]=biases/w tw = 0
 	float th = log(truth[3] * h / biases[2 * n + 1]); //th = 0
 
-														//delta[index + 0] =(-1) * scale * (tx - sigmoid(x[index + 0])) * sigmoid(x[index + 0]) * (1 - sigmoid(x[index + 0]));
-														//delta[index + 1] =(-1) * scale * (ty - sigmoid(x[index + 1])) * sigmoid(x[index + 1]) * (1 - sigmoid(x[index + 1]));
-	delta[index + 0] = (-1) * scale * (tx - x[index + 0]);
-	delta[index + 1] = (-1) * scale * (ty - x[index + 1]);
+	delta[index + 0] =(-1) * scale * (tx - sigmoid(x[index + 0])) * sigmoid(x[index + 0]) * (1 - sigmoid(x[index + 0]));
+	delta[index + 1] =(-1) * scale * (ty - sigmoid(x[index + 1])) * sigmoid(x[index + 1]) * (1 - sigmoid(x[index + 1]));
+	//delta[index + 0] = (-1) * scale * (tx - x[index + 0]);
+	//delta[index + 1] = (-1) * scale * (ty - x[index + 1]);
 	delta[index + 2] = (-1) * scale * (tw - x[index + 2]);
 	delta[index + 3] = (-1) * scale * (th - x[index + 3]);
 
@@ -300,135 +300,8 @@ void RegionLossLayer<Dtype>::Forward_cpu(
 			  for (int i = 0; i < num_class_; ++i)
 				  CHECK_GE(swap_data[index + i], 0);
 		  }
-   //std::cout<<"6"<<std::endl;
-
-  /*for (int b = 0; b < swap.num(); ++b) {
-	  char buf[100];
-	  int idx = (iter*swap.num() % 200)+b;
-	  sprintf(buf, "input\\\input_%05d.jpg", idx);
-	  cv::Mat cv_img = cv::imread(buf);
-	  for (int t = 0; t < 30; ++t) {
-		  vector<Dtype> truth;
-		  Dtype c = label_data[b * 30 * 5 + t * 5 + 0];
-		  Dtype x = label_data[b * 30 * 5 + t * 5 + 1];
-
-		  Dtype y = label_data[b * 30 * 5 + t * 5 + 2];
-		  Dtype w = label_data[b * 30 * 5 + t * 5 + 3];
-		  Dtype h = label_data[b * 30 * 5 + t * 5 + 4];
-		  if (!x) break;
-		  float left = (x - w / 2.);
-		  float right = (x + w / 2.);
-		  float top = (y - h / 2.);
-		  float bot = (y + h / 2.);
-
-		  cv::Point pt1, pt2;
-		  pt1.x = left*cv_img.cols;
-		  pt1.y = top*cv_img.rows;
-		  pt2.x = right*cv_img.cols;
-		  pt2.y = bot*cv_img.rows;
-
-		  cv::rectangle(cv_img, pt1, pt2, cvScalar(0, 255, 0), 1, 8, 0);
-		  char label[100];
-		  sprintf(label, "%s", CLASSES5[static_cast<int>(c + 1)]);
-		  int baseline;
-		  cv::Size size = cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 0.5, 0, &baseline);
-		  cv::Point pt3;
-		  pt3.x = pt1.x + size.width;
-		  pt3.y = pt1.y - size.height;
-		  cv::rectangle(cv_img, pt1, pt3, cvScalar(0, 255, 0), -1);
 
 
-		  cv::putText(cv_img, label, pt1, cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
-		  //LOG(INFO) << "Truth box" << "," << c << "," << x << "," << y << "," << w << "," << h;
-	  }
-	  sprintf(buf, "out\\\out_%05d.jpg", idx);
-	  cv::imwrite(buf, cv_img);
-  }*/
-
-  /*for (int b = 0; b < swap.num(); ++b) {
-	  vector< PredictionResult<Dtype> > predicts;
-	  PredictionResult<Dtype> predict;
-	  predicts.clear();
-	  for (int j = 0; j < side_; ++j) {
-		  for (int i = 0; i < side_; ++i) {
-			  for (int n = 0; n < num_; ++n) {
-				  int index = b * swap.channels() * swap.height() * swap.width() + (j * side_ + i) * swap.height() * swap.width() + n * swap.width();
-				  CHECK_EQ(swap_data[index], swap.data_at(b, j * side_ + i, n, 0));
-				  get_region_box(swap_data, predict, biases_, n, index, i, j, side_, side_);
-				  predict.objScore = swap_data[index + 4];
-				  class_index_and_score(swap_data + index + 5, num_class_, predict);
-				  predict.confidence = predict.objScore *predict.classScore;
-				  if (predict.confidence >= 0.3) {
-					  predicts.push_back(predict);
-				  }
-			  }
-		  }
-	  }
-	  if (b != 0) continue;
-	  vector<int> idxes;
-	  int num_kept = 0;
-	  Dtype nms = 0.45;
-	  if (predicts.size() > 0) {
-		  ApplyNms(predicts, idxes, nms);
-		  num_kept = idxes.size();
-	  }
-	  if (1 )
-	  {
-		  char buf[100];
-		  int idx = (iter*swap.num() % 200) + b;
-		  sprintf(buf, "input\\\input_%05d.jpg", idx);
-		  cv::Mat cv_img = cv::imread(buf);
-		  if (num_kept == 0) {
-			  //LOG(INFO) << "Couldn't find any detections";
-		  }
-		  else
-		  {
-
-			  for (int i = 0; i < num_kept; i++) {
-
-				  float left = (predicts[idxes[i]].x - predicts[idxes[i]].w / 2.);
-				  float right = (predicts[idxes[i]].x + predicts[idxes[i]].w / 2.);
-				  float top = (predicts[idxes[i]].y - predicts[idxes[i]].h / 2.);
-				  float bot = (predicts[idxes[i]].y + predicts[idxes[i]].h / 2.);
-
-				  cv::Point pt1, pt2;
-				  pt1.x = left*cv_img.cols;
-				  pt1.y = top*cv_img.rows;
-				  pt2.x = right*cv_img.cols;
-				  pt2.y = bot*cv_img.rows;
-
-				  cv::rectangle(cv_img, pt1, pt2, cvScalar(0, 255, 0), 1, 8, 0);
-				  char label[100];
-				  sprintf(label, "%s", CLASSES5[static_cast<int>(predicts[idxes[i]].classType + 1)]);
-				  int baseline;
-				  cv::Size size = cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 0.5, 0, &baseline);
-				  cv::Point pt3;
-				  pt3.x = pt1.x + size.width;
-				  pt3.y = pt1.y - size.height;
-				  cv::rectangle(cv_img, pt1, pt3, cvScalar(0, 255, 0), -1);
-
-
-				  cv::putText(cv_img, label, pt1, cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
-
-				  //LOG(INFO) << "Detection box" << "," << predicts[idxes[i]].classType << "," << predicts[idxes[i]].x << "," << predicts[idxes[i]].y << "," << predicts[idxes[i]].w << "," << predicts[idxes[i]].h;
-			  }
-
-			  for (int t = 0; t < 30; ++t) {
-				  vector<Dtype> truth;
-				  Dtype c = label_data[b * 30 * 5 + t * 5 + 0];
-				  Dtype x = label_data[b * 30 * 5 + t * 5 + 1];
-
-				  Dtype y = label_data[b * 30 * 5 + t * 5 + 2];
-				  Dtype w = label_data[b * 30 * 5 + t * 5 + 3];
-				  Dtype h = label_data[b * 30 * 5 + t * 5 + 4];
-				  if (!x) break;
-				  //LOG(INFO) << "Truth box" << "," << c << "," << x << "," << y << "," << w << "," << h;
-			  }
-		  }
-		  sprintf(buf, "out\\\out_%05d.jpg", iter);
-		  cv::imwrite(buf, cv_img);
-	  }
-  }*/
 
 
 #ifdef verify_data
@@ -483,6 +356,7 @@ void RegionLossLayer<Dtype>::Forward_cpu(
 #endif
           float best_iou = 0;
 		  int best_class = -1;
+		  vector<Dtype> best_truth;
           for (int t = 0; t < 30; ++t){
             vector<Dtype> truth;
             Dtype x = label_data[b * 30 * 5 + t * 5 + 1];
@@ -505,6 +379,7 @@ void RegionLossLayer<Dtype>::Forward_cpu(
 			if (iou > best_iou) {
 				best_class = label_data[b * 30 * 5 + t * 5 ];
 				best_iou = iou;
+				best_truth = truth;
 			}
             //if (i + j + n == 0)
             //	LOG(INFO)<<"label,x,y,w,h=["<< label_data[t * 5 + 0] << ","<< x << " " << y << " " << w << " " << h <<"]";
@@ -518,15 +393,22 @@ void RegionLossLayer<Dtype>::Forward_cpu(
             diff[index + 4] = 0;
             //LOG(INFO)<<"best_iou: "<<best_iou<<" index:"<<index;
           }
+		  if (best_iou > 1) {
+			  LOG(INFO) << "best_iou > 1";
+			  diff[index + 4] = 1 - diff[index + 4];
+			  
+			  delta_region_class(swap_data, diff, index+5, best_class, num_class_, class_scale_, &avg_cat);
 
+			  delta_region_box(best_truth, swap_data, biases_, n, index, i, j, side_, side_, diff, .01);
+		  }
           if (iter < 12800 / bottom[0]->num()){
-            vector<Dtype> truth;
-            truth.clear();
-            truth.push_back((i + .5) / side_); //center of i,j
-            truth.push_back((j + .5) / side_);
-            truth.push_back((biases_[2 * n]) / side_); //anchor boxes
-            truth.push_back((biases_[2 * n + 1]) / side_);
-            delta_region_box(truth, swap_data, biases_, n, index, i, j, side_, side_, diff, .01);
+            //vector<Dtype> truth;
+            //truth.clear();
+            //truth.push_back((i + .5) / side_); //center of i,j
+            //truth.push_back((j + .5) / side_);
+            //truth.push_back((biases_[2 * n]) / side_); //anchor boxes
+            //truth.push_back((biases_[2 * n + 1]) / side_);
+            //delta_region_box(truth, swap_data, biases_, n, index, i, j, side_, side_, diff, .01);
           }
         }
 #ifdef verify_data
@@ -584,6 +466,7 @@ void RegionLossLayer<Dtype>::Forward_cpu(
         if (bias_match_){
           pred[2] = biases_[2 * n] / side_;
           pred[3] = biases_[2 * n + 1] / side_;
+		  //LOG(INFO) << "bias_match_ ok";
         }
         //std::cout<<"#########2"<<index<<std::endl;
         pred[0] = 0;
@@ -608,6 +491,7 @@ void RegionLossLayer<Dtype>::Forward_cpu(
       avg_obj += swap_data[best_index + 4];
           //LOG(INFO)<<"avg_obj:"<<avg_obj;
       diff[best_index + 4] = (-1.0) * object_scale_ * (1 - swap_data[best_index + 4]) * logistic_gradient(swap_data[best_index + 4]);
+	  //diff[best_index + 4] = (-1.0) * object_scale_ * (1 - swap_data[best_index + 4])
 	  //LOG(INFO) << "real_diff: " << diff[best_index + 4];
       //if (rescore)
       //std::cout<<"diff:"<<diff[best_index+4]<<std::endl;
