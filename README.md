@@ -18,11 +18,11 @@
 
 ### MobilenetYOLO_V2 Result
 
-![alt tag](out\00001.jpg)
+![alt tag](out/00001.jpg)
 
-![alt tag](out\00006.jpg)
+![alt tag](out/00006.jpg)
 
-![alt tag](out\00010.jpg)
+![alt tag](out/00010.jpg)
 
 #### Python Usage
 
