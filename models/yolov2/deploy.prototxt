@@ -4229,8 +4229,8 @@ layer {
   yolo_detection_output_param {
     num_classes: 20
     coords: 4
-    confidence_threshold: 0.3
-	nms_threshold: 0.45
+    confidence_threshold: 0.6
+	nms_threshold: 0.3
     biases: 1.08
     biases: 1.19
     biases: 3.42
