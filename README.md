@@ -3,12 +3,26 @@
 **This is an experimental, linux version from my git [MobileNetSSD](https://github.com/eric612/MobileNet-SSD-windows)
 
 
-### Running Caffe 
+### Running Caffe with MobilenetSSD_V2
 
 ```
 > cd $caffe_root/
 > sh demo.sh
 ```
+### Running Caffe with MobilenetYOLO_V2
+
+```
+> cd $caffe_root/
+> sh demo_yolo.sh
+```
+
+### MobilenetYOLO_V2 Result
+
+![alt tag](out\00001.jpg)
+
+![alt tag](out\00006.jpg)
+
+![alt tag](out\00010.jpg)
 
 #### Python Usage
 
@@ -36,6 +50,13 @@ Please check the path exist "$caffe_root\examples\VOC0712\VOC0712_trainval_lmdb"
 ```
 > cd $caffe_root/
 > sh train.sh
+```
+
+### Trainning MobilnetYOLO_V2
+  
+```
+> cd $caffe_root/
+> sh train_yolo.sh
 ```
 
 #### Trainning own dataset and deploy MobilentSSD_V1

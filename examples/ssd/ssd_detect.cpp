@@ -413,6 +413,8 @@ int main(int argc, char** argv) {
 			  }
 		  }
 		  cv::imshow("show", img);
+		  sprintf(buf, "out//%05d.jpg", k);
+		  cv::imwrite(buf, img);
 		  cv::waitKey(wait_time);
 		  data.push_back(img);
 	  }
@@ -555,6 +557,18 @@ int main(int argc, char** argv) {
 					  cv::rectangle(img, pt1, pt3, cvScalar(red, green, blue), -1);
 
 					  cv::putText(img, label, pt1, cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
+					  /*int max = 15000;
+					  if (count <= max)
+					  {
+						  cv::Size size;
+						  size.width = img.cols;
+						  size.height = img.rows;
+						  static cv::VideoWriter writer;    // cv::VideoWriter output_video;
+
+						  writer.open("VideoTest.avi", CV_FOURCC('D', 'I', 'V', '3'), 30, size);
+						  writer << img;
+						  count++;
+					  }*/
 				  }
 			  }
 			  cv::imshow("show", img);
