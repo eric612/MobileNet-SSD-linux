@@ -54,6 +54,7 @@ Please check the path exist "$caffe_root\examples\VOC0712\VOC0712_trainval_lmdb"
 
 ### Trainning MobilnetYOLO_V2
   
+[Model Netscope](http://ethereon.github.io/netscope/#/gist/46ef14840c10aa9a0b8b5f4bf5a45ee9)
 ```
 > cd $caffe_root/
 > sh train_yolo.sh
